@@ -4,7 +4,7 @@ General purpose navbar implemented in ReactJS
 # Usage
 Pass in options and a title to the navbar. You can also pass inline styles
 
-"""
+```
 var options = [{
 	title: 'option 1',
 	route: '/',
@@ -22,11 +22,11 @@ var style = {
 }
 
 <Navbar options={options} title='Sample Title' style={style}/> 
-"""
+```
 
 You can also pass in custom header and options JSX
 
-"""
+```
 var option = <li className='navbar-option'>
 	<a href='/'>Custom Option 1</a>
 </li>
@@ -34,5 +34,5 @@ var option = <li className='navbar-option'>
 var header = <h4>Custom Title</h4>
 
 <Navbar custom_option={option} custom_header={header}/>
-"""
+```
 
