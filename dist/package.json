@@ -1,6 +1,6 @@
 {
   "name": "react-ps-navbar",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "General purpose navbar implemented in ReactJS",
   "main": "navbar.js",
   "scripts": {

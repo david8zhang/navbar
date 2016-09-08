@@ -6,8 +6,6 @@ You must have Foundation 6 included as part of the project for this component to
 
 Get it here: [Foundation 6](http://foundation.zurb.com/sites/download.html/)
 
-Require it in your html
-
 ```
 <link rel="stylesheet" type="text/css" href="./style/css/app.css">
 <link rel="stylesheet" type="text/css" href="./style/css/foundation.css">

@@ -23,9 +23,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * @property {Array} 			 options: 		The options within the navbar -> can contain "drops", or options for dropdown menu
- * @property {Object} (OPTIONAL) style: 		The style of the outer navbar
- * @property {Object} (OPTIONAL) option_style:  The style of the options inside the navbar
+ * @property {Array} 			 options: 		 The options within the navbar -> can contain "drops", or options for dropdown menu
+ * @property {String} 			 title: 		 the title of the navbar in the left hand corner	
+ * @property {Object} (OPTIONAL) style: 		 The style of the outer navbar
+ * @property {Object} (OPTIONAL) option_style:   The style of the options inside the navbar
+ * @property {JSX} 	  (OPTIONAL) custom_header:	 A custom header that will replace the default h3 header
+ * @property {JSX} 	  (OPTIONAL) custom_options: A custom list of options that will replace the default NavbarOptions
  */
 
 var Navbar = (function (_Component) {
@@ -60,7 +63,7 @@ var Navbar = (function (_Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'top-bar', style: this.props.style || default_style },
-				_react2.default.createElement(
+				this.props.custom_header || _react2.default.createElement(
 					'div',
 					{ className: 'top-bar-left' },
 					_react2.default.createElement(
@@ -72,7 +75,7 @@ var Navbar = (function (_Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'top-bar-right' },
-					_react2.default.createElement(
+					this.props.custom_options || _react2.default.createElement(
 						'ul',
 						{ className: 'dropdown menu', 'data-dropdown-menu': true, style: { marginLeft: '5px' } },
 						this.props.options.map(renderListItems)

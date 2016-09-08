@@ -44,10 +44,26 @@ var App = (function (_Component) {
 				drops: ['suboption 1', 'suboption 2', 'suboption 3']
 
 			}];
+			var custom_option = _react2.default.createElement(
+				'li',
+				{ className: 'navbar-option' },
+				_react2.default.createElement(
+					'a',
+					{ href: '/' },
+					'Custom option'
+				)
+			);
+
+			var custom_header = _react2.default.createElement(
+				'h4',
+				null,
+				'Custom header!'
+			);
 			return _react2.default.createElement(
 				'div',
 				null,
-				_react2.default.createElement(_navbar2.default, { options: options, title: 'Sample Title' })
+				_react2.default.createElement(_navbar2.default, { options: options, title: 'Sample Title' }),
+				_react2.default.createElement(_navbar2.default, { custom_header: custom_header, custom_options: custom_option })
 			);
 		}
 	}]);
